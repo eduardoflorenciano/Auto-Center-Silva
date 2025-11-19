@@ -197,6 +197,11 @@ header {
     transform: translateY(-10.5px) rotate(-45deg);
 }
 
+/* Esconde os textos do menu na versão desktop */
+.nav-texto {
+    display: none;
+}
+
 /* Seções de produtos */
 .secao-produtos {
     padding: 2rem 1rem;
@@ -219,7 +224,6 @@ header {
 /* Borda dos produtos */
 .borda-produtos {
     background-color: var(--cor-texto-claro);
-    border: 3px solid var(--cor-texto);
     border-radius: 12px;
     padding: 2rem 3.5rem;
     position: relative;
@@ -515,6 +519,14 @@ footer {
         z-index: 1000;
     }
 
+    .navegacao-header .nav-texto {
+        display: inline-block;
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--cor-texto);
+    }
+
     .navegacao-header.active {
         right: 0;
     }
@@ -539,6 +551,7 @@ footer {
         justify-content: flex-start;
         gap: 1rem;
         font-size: 1.1rem;
+        align-items: center;
     }
 
     /* Overlay do menu */
