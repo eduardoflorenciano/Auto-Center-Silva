@@ -1,0 +1,337 @@
+/* Variáveis para usar no CSS */
+:root {
+    --cor-primaria: #8f1515;
+    --cor-secundaria: #c0c0c0;
+    --cor-texto: #000000;
+    --cor-texto-claro: #ffffff;
+    --fonte-principal: "Inter", sans-serif;
+    --espacamento: 3rem;
+    --border-radius: 8px;
+    --transicao: all 0.3s ease;
+}
+
+/* Resetando a formatação da pagina e adicionando a Font de Letra que vamos utilizar no site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/*Aqui adicionamos a cor de fundo para o Body*/
+body {
+    /* Adicionamos uma cor de fundo*/
+    background-color: #8f1515;
+}
+
+/* Header */
+header {
+    /*Estamos deixando o Header flexivel*/
+    display: flex;
+    /*Aqui estamos dando um espaçõ da logo para o icone do carrinho*/
+    justify-content: space-between;
+    /*Aqui estamos colocando uma cor de fundo para o Header*/
+    background-color: #c0c0c0;
+    /*Estamos dando um espaço interno no header*/
+    padding: 0 1rem;
+}
+
+/* Header Logo */
+header .logo {
+    /*Adicionamos a Largura da logo*/
+    width: 80px;
+    /* Adicionamos a Altura da logo */
+    height: 80px;
+}
+
+/* Header Div Img - Imagem do carrinho que vai no Header*/
+header div img {
+    margin-top: 1rem;
+    /*Adicionamos a Largura do carrinho*/
+    width: 40px;
+    /* Adicionamos a Altura do carrinho */
+    height: 40px;
+    margin-right: 2rem;
+    opacity: 75%;
+    transition: transform 0.3s ease;
+}
+
+header div img:hover {
+    opacity: 100%;
+}
+
+/* Section Principal*/
+.sectionPrincipal {
+    /*Estamos deixando o Section flexivel*/
+    display: flex;
+    /* Pegando os itens dentro do Section principal que é flexivel e alinhando horizontalmente no centro */
+    justify-content: center;
+    /* Pegando os itens dentro do Section principal que é flexivel e alinhando verticalmente no centro */
+    align-items: center;
+    /* Faz com que eles quebrem linha automaticamente */
+    flex-wrap: wrap;
+    /* cria um espaçamento entre os itens */
+    gap: 7rem;
+    /* Deixando uma margen externa */
+    margin: 5% auto;
+    /* Deixando um espaçamento interno */
+    padding: 1rem;
+    /* O tamanho maxiomo desse section é de 1200px (equivale a uma tela de computador) */
+    max-width: 1500px;
+}
+
+/* Logo ao lado do formulário */
+.logoFormulario {
+    /* Ocupando o 100% da largura disponivel */
+    width: 100%;
+    /* O maximo de Largura que a imagem vai ter é de 450px */
+    max-width: 450px;
+    /*Adicionando uma margem externa para a direita de 5% */
+    margin-right: 5%;
+}
+
+/* Formulário */
+form {
+    /*Estamos deixando o Formulario flexivel*/
+    display: flex;
+    /* Adicionamos que o sentido dos itens serão em Colunas */
+    flex-direction: column;
+    /* Pegando os itens dentro do Section principal que é flexivel e alinhando verticalmente no centro */
+    align-items: center;
+    /* Ocupando o 100% da largura disponivel */
+    width: 100%;
+    /* O maximo de Largura que o formulario vai ter é de 400px */
+    max-width: 430px;
+    /* O maximo de Altura que a imagem vai ter é de 450px */
+    max-height: 530px;
+    /* Ocupando o 100% da Altura disponivel */
+    height: 100%;
+    /* Estamos dando um espaço interno de 1rem (equivalente a 16px)*/
+    padding: 1rem;
+    /* Estamos adicionando uma cor de fundo para o formulario */
+    background-color: white;
+    /* Estamos arrendondando as bordas do formulario */
+    border-radius: 8px;
+}
+
+/*Aqui é a distancia do h2 para o intup*/
+form h2 {
+    /* Deixando uma distancia externa para o fundo de 1rem ( equivalente a 16px) */
+    margin-bottom: 1rem;
+}
+
+/* Deixando uma distancia externa para o topo de 1rem ( equivalente a 16px) */
+#palavraOu {
+    margin-top: 1rem;
+}
+
+form label {
+    font-weight: 250;
+}
+
+.cadastroEmail input,
+.cadastroTelefone input,
+button {
+    width: 100%;
+    min-width: 330px;
+    height: 40px;
+    margin: 0.6rem 0;
+    border-radius: 4px;
+    padding: 0 1rem;
+    border: solid 1px black;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.entreConta {
+    padding-top: 1.5rem;
+}
+
+#contaEntrando {
+    text-decoration: none;
+    opacity: 65%;
+    transition: transform 1s ease;
+    color: #000000;
+}
+
+#contaEntrando:hover {
+    opacity: 100%;
+    color: var(--cor-primaria);
+}
+
+/* Logins sociais */
+.logins {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.google,
+.face {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 130px;
+    opacity: 65%;
+    transition: transform 0.3s ease;
+}
+
+.google:hover,
+.face:hover {
+    opacity: 100%;
+    transform: translateY(-2px);
+}
+
+.google img,
+.face img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+}
+
+footer {
+    background-color: var(--cor-secundaria);
+    padding: 2rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.footer-coluna h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-info img {
+    width: 20px;
+}
+
+.footer-info a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.footer-info a:hover {
+    color: var(--cor-primaria);
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #999;
+}
+
+/* Responsividade */
+@media (max-width: 1076px) {
+    .logoFormulario {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionPrincipal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoFormulario {
+        max-width: 200px;
+    }
+
+    form {
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+    input[type="number"],
+    button {
+        max-width: 100%;
+    }
+
+    .google,
+    .face {
+        width: 120px;
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header div {
+        margin-left: 0;
+    }
+
+    .navegacao-header ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .sobre-nos-container,
+    .footer-container,
+    .depoimentos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .produtos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .motivos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logins {
+        flex-direction: column;
+    }
+
+    .google,
+    .face {
+        width: 120px;
+    }
+
+    header .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    header div img {
+        width: 35px;
+        height: 35px;
+    }
+}
