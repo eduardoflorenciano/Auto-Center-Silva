@@ -22,17 +22,21 @@
 </head>
 
 <body>
+    <!-- Cabeçalho -->
     <header>
+        <!-- Logo -->
         <a href="#" class="logo" aria-label="Voltar ao início">
             <img src="assets/img/logo.png" alt="Auto Center Silva">
         </a>
 
+        <!-- Menu hamburger (mobile) -->
         <button class="menu-hamburger" aria-label="Abrir menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
+        <!-- Links de navegação -->
         <nav class="navegacao-header" aria-label="Menu principal">
             <ul role="list">
                 <li><a href="#sobre-nos">SOBRE NÓS</a></li>
@@ -43,7 +47,10 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Parte principal -->
     <main>
+        <!-- Slide -->
         <section class="slider">
             <div class="slider-content">
                 <input type="radio" name="btn-radio" id="radio1">
@@ -79,15 +86,18 @@
             </div>
         </section>
 
+        <!-- Botão do WhatsApp -->
         <a href="https://wa.me/5545999051549" target="_blank" class="btn-whatsapp"
             aria-label="Fale conosco no WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
 
+        <!-- Botão de voltar ao topo -->
         <button class="btn-scroll-top" onclick="backTop()" aria-label="Voltar ao topo">
             <i class="fa-solid fa-chevron-up"></i>
         </button>
 
+        <!-- Seção Por que escolher a gente? -->
         <section class="pq-escolher" id="por-que-escolher">
             <h2 class="titulo-secao-vermelho">Por que escolher a gente?</h2>
 
@@ -121,6 +131,7 @@
             </div>
         </section>
 
+        <!-- Seção Sobre Nós -->
         <section id="sobre-nos">
             <h2>Sobre nós</h2>
 
@@ -149,6 +160,7 @@
 
         </section>
 
+        <!-- Seção Nossos Serviços -->
         <section id="nossos-servicos">
             <h2 class="titulo-secao-vermelho">Nossos serviços</h2>
 
@@ -218,43 +230,84 @@
             </div>
         </section>
 
+        <!-- Seção Loja -->
         <section id="loja">
             <h2>Loja</h2>
 
             <div class="produtos-container">
-                <article class="produto-card">
-                    <img src="assets/img/pneu-card.jpg" alt="Pneu LingLong 235/55 R18">
-                    <h3>LingLong 235/55 R18</h3>
-                    <p class="preco">
-                        <span class="preco-de">R$</span>
-                        <span class="preco-valor">250,00</span>
-                    </p>
-                </article>
+                <!-- Card -->
+                <a href="produto.html" class="produto-card">
+                    <div class="card-imagem">
+                        <img src="assets/img/pneu1linglong.png" alt="Pneu Ling Long 225/55/ R18">
+                    </div>
+                    <h3 class="card-titulo">Ling Long 225/55/ R18</h3>
 
-                <article class="produto-card">
-                    <img src="assets/img/pneu-card.jpg" alt="Pneu LingLong 235/55 R18">
-                    <h3>LingLong 235/55 R18</h3>
-                    <p class="preco">
-                        <span class="preco-de">R$</span>
-                        <span class="preco-valor">250,00</span>
-                    </p>
-                </article>
+                    <!-- Avaliação com estrelas -->
+                    <div class="card-avaliacao">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
 
-                <article class="produto-card">
-                    <img src="assets/img/pneu-card.jpg" alt="Pneu LingLong 235/55 R18">
-                    <h3>LingLong 235/55 R18</h3>
-                    <p class="preco">
-                        <span class="preco-de">R$</span>
-                        <span class="preco-valor">250,00</span>
+                    <p class="card-preco">
+                        <span class="simbolo-real">R$</span>
+                        <strong class="valor">250,00</strong>
                     </p>
-                </article>
+                </a>
+
+                <!-- Card -->
+                <a href="produto.html" class="produto-card">
+                    <div class="card-imagem">
+                        <img src="assets/img/pneu1linglong.png" alt="Pneu Ling Long 225/55/ R18">
+                    </div>
+                    <h3 class="card-titulo">Ling Long 225/55/ R18</h3>
+
+                    <!-- Avaliação com estrelas -->
+                    <div class="card-avaliacao">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="card-preco">
+                        <span class="simbolo-real">R$</span>
+                        <strong class="valor">250,00</strong>
+                    </p>
+                </a>
+
+                <!-- Card -->
+                <a href="produto.html" class="produto-card">
+                    <div class="card-imagem">
+                        <img src="assets/img/pneu1linglong.png" alt="Pneu Ling Long 225/55/ R18">
+                    </div>
+                    <h3 class="card-titulo">Ling Long 225/55/ R18</h3>
+
+                    <!-- Avaliação com estrelas -->
+                    <div class="card-avaliacao">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="card-preco">
+                        <span class="simbolo-real">R$</span>
+                        <strong class="valor">250,00</strong>
+                    </p>
+                </a>
             </div>
 
-            <button class="btn-ver-produtos"><a href="loja.html" style="color: #8F1515; text-decoration: none;"
-                    target="_blank">Ver
-                    todos os produtos</a></button>
+            <a href="loja.html" class="btn-ver-produtos" target="_blank">
+                Ver todos os produtos
+            </a>
         </section>
 
+        <!-- Seção Depoimentos -->
         <section id="depoimentos">
             <div class="titulo-secao">
                 <h2 class="titulo-secao-vermelho">Depoimentos</h2>
@@ -311,6 +364,7 @@
             </div>
         </section>
 
+        <!-- Seção Localização -->
         <section id="localizacao">
             <div class="titulo-secao">
                 <h2>Localização</h2>
@@ -325,6 +379,7 @@
 
         </section>
 
+        <!-- Seção FAQ -->
         <section id="faq">
             <div class="titulo-secao">
                 <h2 class="titulo-secao-vermelho">FAQ</h2>
@@ -365,6 +420,7 @@
 
         </section>
 
+        <!-- Seção Atendimento -->
         <section id="atendimento">
             <div class="titulo-secao">
                 <h2>Atendimento</h2>
@@ -396,6 +452,7 @@
 
     </main>
 
+    <!-- Rodapé -->
     <footer>
         <div class="footer-container">
             <div class="footer-coluna">
@@ -440,6 +497,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript da página -->
     <script src="assets/js/script.js"></script>
 </body>
 
