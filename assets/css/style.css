@@ -383,8 +383,6 @@ h2 {
 
 /* Imagem do card */
 .card-imagem {
-    background-color: var(--cor-cinza-claro);
-    border-radius: var(--border-radius);
     padding: 1.5rem;
     display: flex;
     align-items: center;
