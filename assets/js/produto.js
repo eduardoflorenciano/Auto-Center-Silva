@@ -63,7 +63,7 @@ const inputQuantidade = document.getElementById('quantidadeProduto');
 // Aumentar quantidade
 btnAumentar.addEventListener('click', () => {
     let quantidade = parseInt(inputQuantidade.value);
-    if (quantidade < 99) { // Limite máximo
+    if (quantidade < 99) {
         inputQuantidade.value = quantidade + 1;
         atualizarQuantidade();
     }
@@ -72,7 +72,7 @@ btnAumentar.addEventListener('click', () => {
 // Diminuir quantidade
 btnDiminuir.addEventListener('click', () => {
     let quantidade = parseInt(inputQuantidade.value);
-    if (quantidade > 1) { // Mínimo é 1
+    if (quantidade > 1) {
         inputQuantidade.value = quantidade - 1;
         atualizarQuantidade();
     }
@@ -158,7 +158,7 @@ function mostrarNotificacao(mensagem, tipo = 'sucesso') {
     // Adiciona ao body
     document.body.appendChild(notificacao);
 
-    // Adiciona estilos inline (ou crie uma classe CSS)
+    // Adiciona estilos inline para notificação de produtos adicionados no carrinho
     Object.assign(notificacao.style, {
         position: 'fixed',
         top: '20px',
@@ -210,57 +210,21 @@ styleNotificacao.textContent = `
 `;
 document.head.appendChild(styleNotificacao);
 
-// NAVEGAÇÃO DOS PRODUTOS RELACIONADOS
-const setaEsquerda = document.querySelector('.seta-esquerda');
-const setaDireita = document.querySelector('.seta-direita');
-const containerProdutos = document.querySelector('.produtos-relacionados');
-
-// Verifica se as setas existem (podem não existir no mobile)
-if (setaEsquerda && setaDireita) {
-    let scrollAmount = 0;
-
-    setaDireita.addEventListener('click', () => {
-        const cardWidth = containerProdutos.querySelector('.card-produto').offsetWidth + 24;
-        scrollAmount += cardWidth;
-        containerProdutos.scrollTo({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-    });
-
-    setaEsquerda.addEventListener('click', () => {
-        const cardWidth = containerProdutos.querySelector('.card-produto').offsetWidth + 24;
-        scrollAmount -= cardWidth;
-        if (scrollAmount < 0) scrollAmount = 0;
-        containerProdutos.scrollTo({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-    });
-
-    // Atualiza visibilidade das setas
-    containerProdutos.addEventListener('scroll', () => {
-        const maxScroll = containerProdutos.scrollWidth - containerProdutos.clientWidth;
-
-        setaEsquerda.style.opacity = containerProdutos.scrollLeft === 0 ? '0.5' : '1';
-        setaEsquerda.style.pointerEvents = containerProdutos.scrollLeft === 0 ? 'none' : 'auto';
-
-        setaDireita.style.opacity = containerProdutos.scrollLeft >= maxScroll ? '0.5' : '1';
-        setaDireita.style.pointerEvents = containerProdutos.scrollLeft >= maxScroll ? 'none' : 'auto';
-    });
-}
-
 // BARRA DE PESQUISA
 const inputPesquisa = document.getElementById('pesquisar');
 const btnPesquisa = document.querySelector('.btn-search');
 
-btnPesquisa.addEventListener('click', realizarPesquisa);
+if (btnPesquisa) {
+    btnPesquisa.addEventListener('click', realizarPesquisa);
+}
 
-inputPesquisa.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        realizarPesquisa();
-    }
-});
+if (inputPesquisa) {
+    inputPesquisa.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            realizarPesquisa();
+        }
+    });
+}
 
 function realizarPesquisa() {
     const termo = inputPesquisa.value.trim();
@@ -271,7 +235,7 @@ function realizarPesquisa() {
     }
 
     console.log('Pesquisando por:', termo);
-    mostrarNotificacao(`Pesquisando por: ${termo}`, 'info');
+    window.location.href = `loja.html?busca=${encodeURIComponent(termo)}`;
 }
 
 // CARREGAR CARRINHO DO LOCALSTORAGE
@@ -291,53 +255,57 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 100);
 });
 
-// ZOOM NA IMAGEM DO PRODUTO (BONUS)
+// ZOOM NA IMAGEM DO PRODUTO
 const imagemProduto = document.getElementById('imagemPrincipal');
 
-imagemProduto.addEventListener('click', () => {
-    // Cria modal para zoom
-    const modal = document.createElement('div');
-    modal.classList.add('modal-zoom');
-    modal.innerHTML = `
-        <div class="modal-conteudo">
-            <button class="fechar-modal" aria-label="Fechar">&times;</button>
-            <img src="${imagemProduto.src}" alt="${imagemProduto.alt}">
-        </div>
-    `;
+if (imagemProduto) {
+    imagemProduto.addEventListener('click', () => {
+        // Cria modal para zoom
+        const modal = document.createElement('div');
+        modal.classList.add('modal-zoom');
+        modal.innerHTML = `
+            <div class="modal-conteudo">
+                <button class="fechar-modal" aria-label="Fechar">&times;</button>
+                <img src="${imagemProduto.src}" alt="${imagemProduto.alt}">
+            </div>
+        `;
 
-    // Estilos do modal
-    Object.assign(modal.style, {
-        position: 'fixed',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'rgba(0,0,0,0.9)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        zIndex: '10000',
-        cursor: 'zoom-out'
+        // Estilos do modal
+        Object.assign(modal.style, {
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0,0,0,0.9)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: '10000',
+            cursor: 'zoom-out'
+        });
+
+        document.body.appendChild(modal);
+        document.body.style.overflow = 'hidden';
+
+        // Fecha modal ao clicar
+        modal.addEventListener('click', () => {
+            modal.remove();
+            document.body.style.overflow = '';
+        });
+
+        const btnFechar = modal.querySelector('.fechar-modal');
+        if (btnFechar) {
+            btnFechar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                modal.remove();
+                document.body.style.overflow = '';
+            });
+        }
     });
+}
 
-    document.body.appendChild(modal);
-    document.body.style.overflow = 'hidden';
-
-    // Fecha modal ao clicar
-    modal.addEventListener('click', () => {
-        modal.remove();
-        document.body.style.overflow = '';
-    });
-
-    const btnFechar = modal.querySelector('.fechar-modal');
-    btnFechar.addEventListener('click', (e) => {
-        e.stopPropagation();
-        modal.remove();
-        document.body.style.overflow = '';
-    });
-});
-
-// SMOOTH SCROLL (se houver âncoras)
+// SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -354,7 +322,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// LAZY LOADING DE IMAGENS (BONUS)
+// LAZY LOADING DE IMAGENS
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -371,12 +339,3 @@ if ('IntersectionObserver' in window) {
         imageObserver.observe(img);
     });
 }
-
-// CONSOLE LOG ESTILIZADO (BRANDING)
-console.log(
-    '%c🚗 Auto Center Silva %c- Desenvolvido com ❤️',
-    'background: #8F1515; color: white; padding: 8px 12px; font-size: 16px; font-weight: bold; border-radius: 4px;',
-    'color: #8F1515; font-size: 14px; padding: 8px 0;'
-);
-
-console.log('%cVersão: 1.0.0', 'color: #666; font-size: 12px;');

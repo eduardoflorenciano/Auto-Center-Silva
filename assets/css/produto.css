@@ -661,7 +661,7 @@ footer {
 /* Tablet */
 @media (max-width: 768px) {
 
-    /* Header */
+    /* Cabeçalho */
     header {
         padding: 1rem;
         flex-wrap: wrap;
@@ -672,13 +672,13 @@ footer {
         width: 60px;
     }
 
-    /* Mostra menu hamburger */
+    /* Menu hamburger visível */
     .menu-hamburger {
         display: flex;
         order: 3;
     }
 
-    /* Barra de pesquisa em linha completa */
+    /* Barra de pesquisa */
     .search-container {
         order: 4;
         flex-basis: 100%;

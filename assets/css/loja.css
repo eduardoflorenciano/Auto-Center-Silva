@@ -474,7 +474,7 @@ footer {
 
 @media (max-width: 768px) {
 
-    /* Header */
+    /* Cabeçalho */
     header {
         padding: 1rem;
         flex-wrap: wrap;
@@ -491,7 +491,7 @@ footer {
         order: 3;
     }
 
-    /* Barra de pesquisa em linha completa */
+    /* Barra de pesquisa */
     .search-container {
         order: 4;
         flex-basis: 100%;
@@ -632,7 +632,7 @@ footer {
         right: 5px;
     }
 
-    /* Footer */
+    /* Rodapé */
     .footer-container {
         grid-template-columns: 1fr;
         gap: 1.5rem;

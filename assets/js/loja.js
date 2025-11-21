@@ -1,4 +1,4 @@
-// Menu hamburger mobile
+// MENU HAMBURGER MOBILE
 const menuHamburger = document.querySelector('.menu-hamburger');
 const navegacaoHeader = document.querySelector('.navegacao-header');
 const menuLinks = document.querySelectorAll('.navegacao-header a');
@@ -55,7 +55,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Sistema de busca de produtos
+// SISTEMA DE BUSCA DE PRODUTOS
 const inputPesquisa = document.getElementById('pesquisar');
 const btnPesquisa = document.querySelector('.btn-search');
 const semResultados = document.getElementById('semResultados');

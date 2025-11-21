@@ -1,211 +1,399 @@
-/* Variáveis para usar no CSS */
+/* Variáveis CSS */
 :root {
-    --cor-primaria: #8f1515;
+    --cor-primaria: #8F1515;
     --cor-secundaria: #c0c0c0;
     --cor-texto: #000000;
     --cor-texto-claro: #ffffff;
+    --cor-cinza: #666666;
+    --cor-cinza-claro: #f5f5f5;
+    --cor-borda: #dddddd;
+    --cor-sucesso: #008000;
+    --cor-estrela: #FFD700;
     --fonte-principal: "Inter", sans-serif;
     --espacamento: 3rem;
     --border-radius: 8px;
     --transicao: all 0.3s ease;
+    --sombra-leve: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Resetando a formatação da pagina e adicionando a Font de Letra que vamos utilizar no site */
+/* Reset e estilos globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
 }
 
-/*Aqui adicionamos a cor de fundo para o Body*/
 body {
-    /* Adicionamos uma cor de fundo*/
-    background-color: #8f1515;
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-primaria);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: var(--fonte-principal);
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Header */
 header {
-    /*Estamos deixando o Header flexivel*/
+    background-color: var(--cor-secundaria);
+    padding: 1rem 2rem;
     display: flex;
-    /*Aqui estamos dando um espaçõ da logo para o icone do carrinho*/
     justify-content: space-between;
-    /*Aqui estamos colocando uma cor de fundo para o Header*/
-    background-color: #c0c0c0;
-    /*Estamos dando um espaço interno no header*/
-    padding: 0 1rem;
+    align-items: center;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra-leve);
 }
 
-/* Header Logo */
-header .logo {
-    /*Adicionamos a Largura da logo*/
+.logo img {
     width: 80px;
-    /* Adicionamos a Altura da logo */
-    height: 80px;
+    transition: var(--transicao);
 }
 
-/* Header Div Img - Imagem do carrinho que vai no Header*/
-header div img {
-    margin-top: 1rem;
-    /*Adicionamos a Largura do carrinho*/
-    width: 40px;
-    /* Adicionamos a Altura do carrinho */
-    height: 40px;
-    margin-right: 2rem;
-    opacity: 75%;
-    transition: transform 0.3s ease;
+.logo img:hover {
+    transform: scale(1.05);
 }
 
-header div img:hover {
-    opacity: 100%;
+/* Barra de pesquisa */
+.search-container {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
 }
 
-/* Section Principal*/
-.sectionPrincipal {
-    /*Estamos deixando o Section flexivel*/
-    display: flex;
-    /* Pegando os itens dentro do Section principal que é flexivel e alinhando horizontalmente no centro */
-    justify-content: center;
-    /* Pegando os itens dentro do Section principal que é flexivel e alinhando verticalmente no centro */
-    align-items: center;
-    /* Faz com que eles quebrem linha automaticamente */
-    flex-wrap: wrap;
-    /* cria um espaçamento entre os itens */
-    gap: 7rem;
-    /* Deixando uma margen externa */
-    margin: 5% auto;
-    /* Deixando um espaçamento interno */
-    padding: 1rem;
-    /* O tamanho maxiomo desse section é de 1200px (equivale a uma tela de computador) */
-    max-width: 1500px;
-}
-
-/* Logo ao lado do formulário */
-.logoFormulario {
-    /* Ocupando o 100% da largura disponivel */
+#pesquisar {
     width: 100%;
-    /* O maximo de Largura que a imagem vai ter é de 450px */
-    max-width: 450px;
-    /*Adicionando uma margem externa para a direita de 5% */
-    margin-right: 5%;
+    padding: 0.75rem 3rem 0.75rem 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    transition: var(--transicao);
 }
 
-/* Formulário */
-form {
-    /*Estamos deixando o Formulario flexivel*/
-    display: flex;
-    /* Adicionamos que o sentido dos itens serão em Colunas */
-    flex-direction: column;
-    /* Pegando os itens dentro do Section principal que é flexivel e alinhando verticalmente no centro */
-    align-items: center;
-    /* Ocupando o 100% da largura disponivel */
-    width: 100%;
-    /* O maximo de Largura que o formulario vai ter é de 400px */
-    max-width: 430px;
-    /* O maximo de Altura que a imagem vai ter é de 450px */
-    max-height: 530px;
-    /* Ocupando o 100% da Altura disponivel */
+#pesquisar:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(143, 21, 21, 0.1);
+}
+
+.btn-search {
+    position: absolute;
+    right: 0;
+    top: 0;
     height: 100%;
-    /* Estamos dando um espaço interno de 1rem (equivalente a 16px)*/
-    padding: 1rem;
-    /* Estamos adicionando uma cor de fundo para o formulario */
-    background-color: white;
-    /* Estamos arrendondando as bordas do formulario */
-    border-radius: 8px;
-}
-
-/*Aqui é a distancia do h2 para o intup*/
-form h2 {
-    /* Deixando uma distancia externa para o fundo de 1rem ( equivalente a 16px) */
-    margin-bottom: 1rem;
-}
-
-/* Deixando uma distancia externa para o topo de 1rem ( equivalente a 16px) */
-#palavraOu {
-    margin-top: 1rem;
-}
-
-form label {
-    font-weight: 250;
-}
-
-.cadastroEmail input,
-.cadastroTelefone input,
-button {
-    width: 100%;
-    min-width: 330px;
-    height: 40px;
-    margin: 0.6rem 0;
-    border-radius: 4px;
     padding: 0 1rem;
-    border: solid 1px black;
+    background: transparent;
+    border: none;
+    color: var(--cor-cinza);
+    font-size: 1.1rem;
+    transition: var(--transicao);
 }
 
-button {
-    background-color: #000000;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-button:hover {
-    transform: translateY(-2px);
-}
-
-.entreConta {
-    padding-top: 1.5rem;
-}
-
-#contaEntrando {
-    text-decoration: none;
-    opacity: 65%;
-    transition: transform 1s ease;
-    color: #000000;
-}
-
-#contaEntrando:hover {
-    opacity: 100%;
+.btn-search:hover {
     color: var(--cor-primaria);
 }
 
-/* Logins sociais */
-.logins {
+/* Navegação header */
+.navegacao-header ul {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 1.5rem;
+    align-items: center;
 }
 
-.google,
-.face {
+.navegacao-header a {
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 0.5rem;
-    border: 2px solid black;
-    border-radius: 7px;
-    cursor: pointer;
-    width: 130px;
-    opacity: 65%;
-    transition: transform 0.3s ease;
+    transition: var(--transicao);
 }
 
-.google:hover,
-.face:hover {
-    opacity: 100%;
+.navegacao-header a:hover {
+    transform: scale(1.1);
+}
+
+.navegacao-header img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Badge do carrinho */
+.badge-carrinho {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    font-size: 0.7rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Esconde textos no desktop */
+.nav-texto {
+    display: none;
+}
+
+/* Menu hamburger */
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--cor-texto);
+    border-radius: 3px;
+    transition: var(--transicao);
+}
+
+.menu-hamburger:hover span {
+    background-color: var(--cor-primaria);
+}
+
+.menu-hamburger.active span:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+.menu-hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburger.active span:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
+/* Seção principal */
+.secao-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 3rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+}
+
+.logo-formulario {
+    width: 100%;
+    max-width: 450px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Formulário */
+.formulario-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    padding: 2.5rem;
+    background-color: var(--cor-texto-claro);
+    border-radius: 12px;
+    box-shadow: var(--sombra-media);
+    animation: slideInUp 0.6s ease-out;
+}
+
+.formulario-cadastro h2 {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Campos do formulário */
+.campo-formulario {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.campo-formulario label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--cor-texto);
+}
+
+.campo-formulario input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: var(--transicao);
+}
+
+.campo-formulario input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(143, 21, 21, 0.1);
+}
+
+.campo-formulario input:valid {
+    border-color: var(--cor-sucesso);
+}
+
+.campo-formulario input:invalid:not(:placeholder-shown) {
+    border: #DC3545;
+}
+
+/* Botão concluir */
+.btn-concluir {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--cor-texto);
+    color: var(--cor-texto-claro);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: var(--transicao);
+}
+
+.btn-concluir:hover {
+    background-color: #333;
     transform: translateY(-2px);
+    box-shadow: var(--sombra-leve);
 }
 
-.google img,
-.face img {
+.btn-concluir:active {
+    transform: translateY(0);
+}
+
+/* Divisor "Ou" */
+.divisor {
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--cor-cinza);
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.divisor::before,
+.divisor::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: var(--cor-borda);
+}
+
+.divisor::before {
+    left: 0;
+}
+
+.divisor::after {
+    right: 0;
+}
+
+/* Logins sociais */
+.logins-sociais {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.btn-social {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: 2px solid var(--cor-borda);
+    border-radius: 6px;
+    background-color: var(--cor-texto-claro);
+    font-weight: 500;
+    transition: var(--transicao);
+    min-height: 50px;
+}
+
+.btn-social:hover {
+    border-color: var(--cor-texto);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-leve);
+}
+
+.btn-social:active {
+    transform: translateY(0);
+}
+
+.btn-social img {
     width: 24px;
     height: 24px;
-    margin-right: 0.5rem;
+    flex-shrink: 0;
 }
 
+.btn-social span {
+    font-size: 0.95rem;
+}
+
+/* Link de login */
+.link-login {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--cor-cinza);
+}
+
+.link-login a {
+    color: var(--cor-primaria);
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.link-login a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
 footer {
     background-color: var(--cor-secundaria);
     padding: 2rem;
+    margin-top: auto;
 }
 
 .footer-container {
@@ -219,17 +407,24 @@ footer {
 .footer-coluna h3 {
     color: var(--cor-primaria);
     margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-coluna p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-info {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .footer-info img {
-    width: 20px;
+    width: 24px;
+    height: 24px;
 }
 
 .footer-info a {
@@ -245,93 +440,234 @@ footer {
 
 .footer-copyright {
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     border-top: 1px solid #999;
+    color: var(--cor-texto);
+    font-size: 0.9rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsividade */
 @media (max-width: 1076px) {
-    .logoFormulario {
+    .logo-formulario {
         display: none;
     }
 }
 
+@media (max-width: 900px) {
+    .btn-social span {
+        font-size: 0.9rem;
+    }
+}
+
 @media (max-width: 768px) {
-    .sectionPrincipal {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .logoFormulario {
-        max-width: 200px;
-    }
-
-    form {
-        margin-top: 1rem;
+    /* Cabeçalho */
+    header {
         padding: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
-    input[type="number"],
-    button {
+    /* Logo do cabeçalho */
+    .logo img {
+        width: 60px;
+    }
+
+    /* Menu hamburger visível */
+    .menu-hamburger {
+        display: flex;
+        order: 3;
+    }
+
+    /* Barra de pesquisa */
+    .search-container {
+        order: 4;
+        flex-basis: 100%;
         max-width: 100%;
     }
 
-    .google,
-    .face {
-        width: 120px;
-        font-size: 14px;
+    /* Navegação mobile */
+    .navegacao-header {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--cor-secundaria);
+        padding: 80px 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        transition: right 0.4s ease;
+        z-index: 1000;
     }
 
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    header div {
-        margin-left: 0;
+    .navegacao-header.active {
+        right: 0;
     }
 
     .navegacao-header ul {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0;
     }
 
-    .sobre-nos-container,
-    .footer-container,
-    .depoimentos-container {
+    .navegacao-header li {
+        width: 100%;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navegacao-header li:last-child {
+        border-bottom: none;
+    }
+
+    .navegacao-header a {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 1rem;
+        font-size: 1.1rem;
+    }
+
+    /* Mostra textos no mobile */
+    .navegacao-header .nav-texto {
+        display: inline-block;
+    }
+
+    /* Badge ajustado */
+    .navegacao-header .badge-carrinho {
+        position: static;
+        margin-left: auto;
+    }
+
+    /* Overlay */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+        z-index: 999;
+    }
+
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Formulário */
+    .secao-principal {
+        padding: 2rem 1rem;
+    }
+
+    .formulario-cadastro {
+        padding: 2rem 1.5rem;
+    }
+
+    .logins-sociais {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn-social {
+        padding: 0.65rem 0.5rem;
+    }
+
+    .btn-social span {
+        font-size: 0.85rem;
+    }
+
+    /* Rodapé */
+    .footer-container {
         grid-template-columns: 1fr;
-    }
-
-    .produtos-container {
-        grid-template-columns: 1fr;
-    }
-
-    .motivos-container {
-        grid-template-columns: 1fr;
-    }
-
-    .logo img {
-        width: 60px;
     }
 }
 
 @media (max-width: 480px) {
-    .logins {
+    .logo img {
+        width: 50px;
+    }
+
+    .navegacao-header {
+        width: 80%;
+    }
+
+    .navegacao-header img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .formulario-cadastro {
+        padding: 1.5rem 1rem;
+    }
+
+    .formulario-cadastro h2 {
+        font-size: 1.5rem;
+    }
+
+    .logins-sociais {
+        gap: 0.5rem;
+    }
+
+    .btn-social {
         flex-direction: column;
+        padding: 0.75rem 0.5rem;
+        gap: 0.35rem;
     }
 
-    .google,
-    .face {
-        width: 120px;
+    .btn-social img {
+        width: 28px;
+        height: 28px;
     }
 
-    header .logo {
-        width: 60px;
-        height: 60px;
+    .btn-social span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .logins-sociais {
+        flex-direction: column;
+        gap: 0.75rem;
     }
 
-    header div img {
-        width: 35px;
-        height: 35px;
+    .btn-social {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0.75rem;
+    }
+
+    .btn-social img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .btn-social span {
+        font-size: 0.9rem;
     }
 }
