@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Auto Center Silva - Oficina mecânica em Foz do Iguaçu.">
+    <meta name="keywords" content="oficina mecânica, auto center, pneus, alinhamento, balanceamento, Foz do Iguaçu">
+    <meta name="author" content="Auto Center Silva">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/produto.css">
+    <title>Pneu Ling Long 215/75/R17.5 | Auto Center Silva</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Logo da empresa -->
+        <a href="loja.html" class="logo" aria-label="Voltar ao início">
+            <img src="assets/img/logo.png" alt="Auto Center Silva">
+        </a>
+
+        <!-- Barra de pesquisa -->
+        <div class="search-container">
+            <input type="search" name="pesquisar" id="pesquisar" placeholder="Buscar produtos">
+            <button type="button" class="btn-search" aria-label="Realizar busca">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Links de navegação -->
+        <nav class="navegacao-header" aria-label="Menu principal">
+            <ul role="list">
+                <li>
+                    <a href="carrinho.html" aria-label="Carrinho de compras">
+                        <img src="assets/img/carrinho.png" alt="Carrinho de compras">
+                        <span class="badge-carrinho">0</span>
+                        <span class="nav-texto">Carrinho</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html" class="nav-link" aria-label="Fazer login">
+                        <img src="assets/img/pessoa.png" alt="Login">
+                        <span class="nav-texto">Perfil</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Menu hamburger (mobile) -->
+        <button class="menu-hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Seção de links das páginas anteriores -->
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ol>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="loja.html">Loja</a></li>
+            <li aria-current="page">Produtos mais vendidos</li>
+        </ol>
+    </nav>
+
+    <!-- Parte principal -->
+    <main>
+        <!-- Seção da descrição do produto -->
+        <section class="secao-produto">
+            <div class="container-produto">
+                <div class="produto-imagem">
+                    <!-- Coluna esqueda (imagem do produto) -->
+                    <figure>
+                        <img src="assets/img/pneu4linglong.png" alt="Pneu Ling Long 215/75/R17.5" id="imagemPrincipal">
+                    </figure>
+
+                    <!-- Etiqueta de eficiência energética -->
+                    <div class="etiqueta-eficiencia">
+                        <img src="assets/img/etiqueta-eficiencia.webp" alt="Etiqueta de eficiência energética">
+                    </div>
+                </div>
+
+                <!-- Coluna Direita (informações) -->
+                <div class="produto-info">
+                    <h1 class="nome-produto">Pneu Ling Long 215/75/R17.5</h1>
+
+                    <!-- Avaliação -->
+                    <div class="avaliacao">
+                        <span class="nota">5.0</span>
+                        <div class="estrelas" aria-label="Avaliação: 3 de 5 estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <!-- Preço -->
+                    <p class="preco">
+                        <span class="real-simbolo">R$</span>
+                        <strong class="valor-preco">250,00</strong>
+                    </p>
+
+                    <!-- Quantidade -->
+                    <div class="quantidade-grupo">
+                        <label for="quantidadeProduto" class="quantidade-label">Quantidade</label>
+                        <div class="controle-quantidade">
+                            <button type="button" class="btn-quantidade" id="diminuir" aria-label="Diminuir quantidade">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <input type="number" name="quantidadeProduto" id="quantidadeProduto" value="1" min="1"
+                                readonly aria-label="Quantidade do produto">
+                            <button type="button" class="btn-quantidade" id="aumentar" aria-label="Aumentar quantidade">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Botão adicionar ao carrinho -->
+                    <button class="botao-adicionar-carrinho" id="btnAdicionarCarrinho">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Adicionar ao carrinho de compras
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalhes do produto -->
+        <section class="secao-detalhes">
+            <div class="container-detalhes">
+                <h2 class="subtitulo-secao">Detalhes do produto</h2>
+
+                <div class="borda-detalhes-produto">
+                    <div class="detalhe-coluna">
+                        <h3>Descrição técnica</h3>
+                        <ul>
+                            <li><strong>Marca:</strong> Ling Long</li>
+                            <li><strong>Modelo:</strong> 215/75/R17.5</li>
+                            <li><strong>Aplicação:</strong> Caminhões e ônibus</li>
+                            <li><strong>Tipo de construção:</strong> Radial</li>
+                        </ul>
+                    </div>
+
+                    <div class="detalhe-coluna">
+                        <h3>Medidas</h3>
+                        <ul>
+                            <li><strong>Largura:</strong> 315 mm</li>
+                            <li><strong>Perfil:</strong> 80</li>
+                            <li><strong>Aro:</strong> 22.5 polegadas</li>
+                        </ul>
+                    </div>
+
+                    <div class="detalhe-coluna">
+                        <h3>Diferenciais</h3>
+                        <ul>
+                            <li>Melhor dissipação de calor</li>
+                            <li>Alta resistência para longas distâncias</li>
+                            <li>Durabilidade superior em rodovias</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Você também pode gostar -->
+        <section class="secao-relacionados">
+            <div class="container-relacionados">
+                <h2 class="subtitulo-secao">Você também pode gostar</h2>
+
+                <div class="produtos-relacionados">
+                    <!-- Card -->
+                    <a href="produto.html" class="produto-card">
+                        <div class="card-imagem">
+                            <img src="assets/img/pneu1linglong.png" alt="Pneu Ling Long 225/55/R18">
+                        </div>
+                        <h3 class="card-titulo">Ling Long 225/55/R18</h3>
+
+                        <!-- Avaliação com estrelas -->
+                        <div class="card-avaliacao">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="card-preco">
+                            <span class="simbolo-real">R$</span>
+                            <strong class="valor">250,00</strong>
+                        </p>
+                    </a>
+
+                    <!-- Card -->
+                    <a href="produto2.html" class="produto-card">
+                        <div class="card-imagem">
+                            <img src="assets/img/pneu2XBRI.png" alt="Pneu XBRI 265/70/R16">
+                        </div>
+                        <h3 class="card-titulo">XBRI 265/70/R16</h3>
+
+                        <!-- Avaliação com estrelas -->
+                        <div class="card-avaliacao">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="card-preco">
+                            <span class="simbolo-real">R$</span>
+                            <strong class="valor">250,00</strong>
+                        </p>
+                    </a>
+
+                    <!-- Card -->
+                    <a href="produto3.html" class="produto-card">
+                        <div class="card-imagem">
+                            <img src="assets/img/pneu3XBRI.png" alt="Pneu XBRI 315/80/R22.5">
+                        </div>
+                        <h3 class="card-titulo">XBRI 315/80/R22.5</h3>
+
+                        <!-- Avaliação com estrelas -->
+                        <div class="card-avaliacao">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="card-preco">
+                            <span class="simbolo-real">R$</span>
+                            <strong class="valor">250,00</strong>
+                        </p>
+                    </a>
+
+                    <!-- Card -->
+                    <a href="produto5.html" class="produto-card">
+                        <div class="card-imagem">
+                            <img src="assets/img/pneu5sunset.png" alt="Pneu Sunset Tires 245/70/R16">
+                        </div>
+                        <h3 class="card-titulo">Sunset Tires 245/70/R16</h3>
+
+                        <!-- Avaliação com estrelas -->
+                        <div class="card-avaliacao">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="card-preco">
+                            <span class="simbolo-real">R$</span>
+                            <strong class="valor">250,00</strong>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-coluna">
+                <h3>Horário de atendimento</h3>
+                <p>Segunda à sexta: 7h30 - 18h00</p>
+                <p>Sábado: 7h30 - 12h00</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>Onde estamos</h3>
+                <div class="footer-info">
+                    <img src="assets/img/localizacao-footer.png" alt="Localização">
+                    <p>Av. Beira-Rio - Vila Portes, Foz do Iguaçu</p>
+                </div>
+                <div class="footer-info">
+                    <img src="assets/img/whatsapp-footer.png" alt="WhatsApp">
+                    <p>+55 (45) 99905-1549</p>
+                </div>
+                <div class="footer-info">
+                    <img src="assets/img/email-footer.png" alt="E-mail">
+                    <p>autocentersilvamkt@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>Redes sociais</h3>
+                <div class="footer-info">
+                    <img src="assets/img/instagram-footer.png" alt="Instagram">
+                    <a href="https://instagram.com/autocentersilvaa" target="_blank">autocentersilvaa</a>
+                </div>
+
+                <div class="footer-info">
+                    <img src="assets/img/facebook-footer.png" alt="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61578792843865" target="_blank">Auto Center
+                        Silva</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 Auto Center Silva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScrippt da página -->
+    <script src="assets/js/produto.js"></script>
+</body>
+
+</html>

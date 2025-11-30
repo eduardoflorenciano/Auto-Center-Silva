@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se no Auto Center Silva">
+    <meta name="keywords" content="cadastro, login, auto center, pneus">
+    <meta name="author" content="Auto Center Silva">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <title>Cadastre-se | Auto Center Silva</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Logo da empresa -->
+        <a href="loja.html" class="logo" aria-label="Voltar ao início">
+            <img src="assets/img/logo.png" alt="Auto Center Silva">
+        </a>
+
+        <!-- Barra de pesquisa-->
+        <div class="search-container">
+            <input type="search" name="pesquisar" id="pesquisar" placeholder="Buscar produtos"
+                aria-label="Buscar produtos">
+            <button type="button" class="btn-search" aria-label="Realizar busca">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Links de navegação -->
+        <nav class="navegacao-header" aria-label="Menu principal">
+            <ul role="list">
+                <li>
+                    <a href="carrinho.html" class="nav-link" aria-label="Carrinho de compras">
+                        <img src="assets/img/carrinho.png" alt="Carrinho de compras">
+                        <span class="nav-texto">Carrinho</span>
+                        <span class="badge-carrinho">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html" class="nav-link" aria-label="Fazer login">
+                        <img src="assets/img/pessoa.png" alt="Login">
+                        <span class="nav-texto">Perfil</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Menu hamburger (mobile) -->
+        <button class="menu-hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Parte principal -->
+    <main>
+        <section class="secao-principal">
+            <img src="assets/img/logo02.png" alt="Logo Auto Center Silva" class="logo-formulario">
+
+            <form action="" method="post" class="formulario-cadastro">
+                <h2>Cadastre-se</h2>
+
+                <div class="campo-formulario">
+                    <label for="telefone">Insira seu número</label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="EX: (45) 99905-1549" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="email">Insira seu e-mail</label>
+                    <input type="email" name="email" id="email" placeholder="EX: autocentersilvamk@gmail.com" required>
+                </div>
+
+                <button type="submit" class="btn-concluir">Concluir</button>
+
+                <p class="divisor">Ou</p>
+
+                <section class="logins-sociais">
+                    <button type="button" class="btn-social google">
+                        <img src="assets/img/logo-google.png" alt="Google">
+                        <span>Google</span>
+                    </button>
+
+                    <button type="button" class="btn-social facebook">
+                        <img src="assets/img/logo-face.png" alt="Facebook">
+                        <span>Facebook</span>
+                    </button>
+                </section>
+
+                <p class="link-login">
+                    Tem uma conta? <a href="#" id="link-entrar">Entre</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-coluna">
+                <h3>Horário de atendimento</h3>
+                <p>Segunda à sexta: 7h30 - 18h00</p>
+                <p>Sábado: 7h30 - 12h00</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>Onde estamos</h3>
+                <div class="footer-info">
+                    <img src="assets/img/localizacao-footer.png" alt="Localização">
+                    <p>Av. Beira-Rio - Vila Portes, Foz do Iguaçu</p>
+                </div>
+                <div class="footer-info">
+                    <img src="assets/img/whatsapp-footer.png" alt="WhatsApp">
+                    <p>+55 (45) 99905-1549</p>
+                </div>
+                <div class="footer-info">
+                    <img src="assets/img/email-footer.png" alt="E-mail">
+                    <p>autocentersilvamkt@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>Redes sociais</h3>
+                <div class="footer-info">
+                    <img src="assets/img/instagram-footer.png" alt="Instagram">
+                    <a href="https://instagram.com/autocentersilvaa" target="_blank">autocentersilvaa</a>
+                </div>
+
+                <div class="footer-info">
+                    <img src="assets/img/facebook-footer.png" alt="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61578792843865" target="_blank">Auto Center
+                        Silva</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 Auto Center Silva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript da página -->
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>

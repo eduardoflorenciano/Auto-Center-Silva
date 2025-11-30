@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Auto Center Silva - Oficina mecânica em Foz do Iguaçu.">
+    <meta name="keywords" content="oficina mecânica, auto center, pneus, alinhamento, balanceamento, Foz do Iguaçu">
+    <meta name="author" content="Auto Center Silva">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <title>Conheça a nossa oficina | Auto Center Silva</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Logo -->
+        <a href="#" class="logo" aria-label="Voltar ao início">
+            <img src="assets/img/logo.png" alt="Auto Center Silva">
+        </a>
+
+        <!-- Menu hamburger (mobile) -->
+        <button class="menu-hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Links de navegação -->
+        <nav class="navegacao-header" aria-label="Menu principal">
+            <ul role="list">
+                <li><a href="#sobre-nos">SOBRE NÓS</a></li>
+                <li><a href="#nossos-servicos">NOSSOS SERVIÇOS</a></li>
+                <li><a href="#loja">LOJA</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#atendimento" class="destaque">ATENDIMENTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Parte principal -->
+    <main>
+        <!-- Slide -->
+        <section class="slider">
+            <div class="slider-content">
+                <input type="radio" name="btn-radio" id="radio1">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+
+                <div class="slide-box primeiro">
+                    <img src="assets/img/img-1-desktop.jpg" alt="Slide 1" class="img-desktop">
+                    <img src="assets/img/img-1-mobile.png" alt="Slide 1" class="img-mobile">
+                </div>
+
+                <div class="slide-box">
+                    <img src="assets/img/img-2-desktop.png" alt="Slide 2" class="img-desktop">
+                    <img src="assets/img/img-2-mobile.png" alt="Slide 2" class="img-mobile">
+                </div>
+
+                <div class="slide-box">
+                    <img src="assets/img/img-3-desktop.png" alt="Slide 3" class="img-desktop">
+                    <img src="assets/img/img-3-mobile.png" alt="Slide 3" class="img-mobile">
+                </div>
+
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botão do WhatsApp -->
+        <a href="https://wa.me/5545999051549" target="_blank" class="btn-whatsapp"
+            aria-label="Fale conosco no WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <!-- Botão de voltar ao topo -->
+        <button class="btn-scroll-top" onclick="backTop()" aria-label="Voltar ao topo">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+
+        <!-- Seção Por que escolher a gente? -->
+        <section class="pq-escolher" id="por-que-escolher">
+            <h2 class="titulo-secao-vermelho">Por que escolher a gente?</h2>
+
+            <div class="motivos-container">
+                <article class="motivo-card">
+                    <img src="assets/img/manutencao-preventiva.png" alt="Manutenção preventiva">
+                    <p>Troca de óleo, revisão de freios, filtros e outros itens que evitam falhas maiores e prolongam a
+                        vida
+                        útil do veículo.</p>
+                </article>
+
+                <article class="motivo-card">
+                    <img src="assets/img/diagnostico-e-reparo-de-problemas.png" alt="Diagnóstico e reparo de problemas">
+                    <p>Identificação e solução de falhas mecânicas, elétricas ou eletrônicas que o motorista não
+                        consegue
+                        resolver sozinho.</p>
+                </article>
+
+                <article class="motivo-card">
+                    <img src="assets/img/seguranca.png" alt="Segurança">
+                    <p>Garantir que pneus, suspensão, freios e demais sistemas estejam em boas condições para evitar
+                        acidentes.</p>
+                </article>
+
+                <article class="motivo-card">
+                    <img src="assets/img/sofa.png" alt="Conforto">
+                    <p>Nossa loja conta com sala de espera confortável com TV, café, bolo e salgados. Também temos um
+                        espaço
+                        kids para as crianças se divertirem enquanto você aguarda.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section id="sobre-nos">
+            <h2>Sobre nós</h2>
+
+            <div class="sobre-nos-container">
+                <div class="sobre-nos-imagem">
+                    <img src="assets/img/oficina-sobre-nos.png" alt="Fachada da Auto Center Silva">
+                </div>
+
+                <div class="sobre-nos-texto">
+                    <p>Nossa oficina mecânica é especializada em oferecer serviços de manutenção e reparo automotivo com
+                        qualidade, transparência e confiança. Contamos com uma equipe de profissionais qualificados e
+                        equipamentos modernos para diagnosticar e resolver desde problemas simples até os mais
+                        complexos,
+                        garantindo que seu veículo esteja sempre em perfeitas condições.</p>
+
+                    <p>Realizamos serviços de troca de óleo, alinhamento e balanceamento, revisão completa, reparo em
+                        freios, suspensão, motor e sistema elétrico. Nosso compromisso é cuidar do seu carro como se
+                        fosse
+                        nosso, prezando pela segurança, desempenho e economia.</p>
+
+                    <p>Aqui, cada cliente é atendido com atenção e honestidade, recebendo orientações claras sobre os
+                        serviços necessários, prazos e custos. Se você busca tranquilidade e confiança para rodar sem
+                        preocupações, nossa oficina é o lugar certo.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Seção Nossos Serviços -->
+        <section id="nossos-servicos">
+            <h2 class="titulo-secao-vermelho">Nossos serviços</h2>
+
+            <div class="servicos-container">
+                <div class="icons-servicos">
+                    <figure>
+                        <img src="assets/img/abs.png" alt="ABS">
+                    </figure>
+                    <p>ABS</p>
+                </div>
+
+                <div class="icons-servicos">
+                    <figure>
+                        <img src="assets/img/alinhamento.png" alt="Alinhamento">
+                    </figure>
+                    <p>Alinhamento</p>
+                </div>
+
+                <div class="icons-servicos">
+                    <figure>
+                        <img src="assets/img/air-bag.png" alt="Air-bag">
+                    </figure>
+                    <p>Air-bag</p>
+                </div>
+
+                <div class="icons-servicos">
+                    <figure>
+                        <img src="assets/img/balanceamento.png" alt="Balanceamento">
+                    </figure>
+                    <p>Balanceamento</p>
+                </div>
+
+                <div class="icons-servicos">
+                    <figure>
+                        <img src="assets/img/freios.png" alt="Freios">
+                    </figure>
+                    <p>Freios</p>
+                </div>
+
+                <div class="icons-servicos">
+                    <figure>
+                        <img src="assets/img/injeção eletrônica.png" alt="Injeção eletrônica">
+                    </figure>
+                    <p>Injeção eletrônica</p>
+                </div>
+
+                <div class="icons-servicos">
+                    <figure>
+                        <img src="assets/img/mecanica-em-geral.png" alt="Mecânica em geral">
+                    </figure>
+                    <p>Mecânica em geral</p>
+                </div>
+
+                <div class="icons-servicos">
+                    <figure>
+                        <img src="assets/img/pneus.png" alt="Pneus">
+                    </figure>
+                    <p>Pneus</p>
+                </div>
+
+                <div class="icons-servicos">
+                    <figure>
+                        <img src="assets/img/suspensao.png" alt="Suspensão">
+                    </figure>
+                    <p>Suspensão</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Loja -->
+        <section id="loja">
+            <h2>Loja</h2>
+
+            <div class="produtos-container">
+                <!-- Card -->
+                <a href="produto.html" class="produto-card">
+                    <div class="card-imagem">
+                        <img src="assets/img/pneu1linglong.png" alt="Pneu Ling Long 225/55/R18">
+                    </div>
+                    <h3 class="card-titulo">Ling Long 225/55/R18</h3>
+
+                    <!-- Avaliação com estrelas -->
+                    <div class="card-avaliacao">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="card-preco">
+                        <span class="simbolo-real">R$</span>
+                        <strong class="valor">250,00</strong>
+                    </p>
+                </a>
+
+                <!-- Card -->
+                <a href="produto2.html" class="produto-card">
+                    <div class="card-imagem">
+                        <img src="assets/img/pneu2XBRI.png" alt="Pneu XBRI 265/70/R16">
+                    </div>
+                    <h3 class="card-titulo">XBRI 265/70/R16</h3>
+
+                    <!-- Avaliação com estrelas -->
+                    <div class="card-avaliacao">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="card-preco">
+                        <span class="simbolo-real">R$</span>
+                        <strong class="valor">250,00</strong>
+                    </p>
+                </a>
+
+                <!-- Card -->
+                <a href="produto3.html" class="produto-card">
+                    <div class="card-imagem">
+                        <img src="assets/img/pneu3XBRI.png" alt="Pneu XBRI 315/80/R22.5">
+                    </div>
+                    <h3 class="card-titulo">XBRI 315/80/R22.5</h3>
+
+                    <!-- Avaliação com estrelas -->
+                    <div class="card-avaliacao">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="card-preco">
+                        <span class="simbolo-real">R$</span>
+                        <strong class="valor">250,00</strong>
+                    </p>
+                </a>
+            </div>
+
+            <a href="loja.html" class="btn-ver-produtos" target="_blank">
+                Ver todos os produtos
+            </a>
+        </section>
+
+        <!-- Seção Depoimentos -->
+        <section id="depoimentos">
+            <div class="titulo-secao">
+                <h2 class="titulo-secao-vermelho">Depoimentos</h2>
+            </div>
+
+            <div class="depoimentos-container">
+
+                <article class="depoimento-card">
+                    <div class="depoimento-fita"></div>
+                    <p class="depoimento-nome">Fernanda Bettiato</p>
+                    <img src="assets/img/perfil-feminino.png" alt="Depoimento feminino" class="depoimento-avatar">
+                    <p class="depoimento-texto">"Excelente atendimento, trabalho impecável a mais de 2 anos sempre
+                        trocando
+                        pneus com o Luciano."</p>
+                </article>
+
+                <article class="depoimento-card">
+                    <div class="depoimento-fita"></div>
+                    <p class="depoimento-nome">Rafael Bertolazo</p>
+                    <img src="assets/img/perfil-masculino.png" alt="Depoimento masculino" class="depoimento-avatar">
+                    <p class="depoimento-texto">"Atendimento muito bom, negociação tranquila! Produtos de qualidade!
+                        Recomendo."</p>
+                </article>
+
+                <article class="depoimento-card">
+                    <div class="depoimento-fita"></div>
+                    <p class="depoimento-nome">Rafael Silva</p>
+                    <img src="assets/img/perfil-masculino.png" alt="Depoimento masculino" class="depoimento-avatar">
+                    <p class="depoimento-texto">"Atendimento excelente, agilidade na prestação do serviço e preço muito
+                        acessível."</p>
+                </article>
+
+                <article class="depoimento-card">
+                    <div class="depoimento-fita"></div>
+                    <p class="depoimento-nome">Janaina Jana</p>
+                    <img src="assets/img/perfil-feminino.png" alt="Depoimento feminino" class="depoimento-avatar">
+                    <p class="depoimento-texto">"Agilidade, preço, ótimo atendimento, tanto pelo WhatsApp quanto na
+                        entrega."</p>
+                </article>
+
+                <article class="depoimento-card">
+                    <div class="depoimento-fita"></div>
+                    <p class="depoimento-nome">Diogo Ruiz Diaz</p>
+                    <img src="assets/img/perfil-masculino.png" alt="Depoimento masculino" class="depoimento-avatar">
+                    <p class="depoimento-texto">"Ótimo atendimento, lugar limpo e organizado... super indico..."</p>
+                </article>
+
+                <article class="depoimento-card">
+                    <div class="depoimento-fita"></div>
+                    <p class="depoimento-nome">Fábio Emerichz</p>
+                    <img src="assets/img/perfil-masculino.png" alt="Depoimento masculino" class="depoimento-avatar">
+                    <p class="depoimento-texto">"Super indico, pessoas honestas, serviço excelente."</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Localização -->
+        <section id="localizacao">
+            <div class="titulo-secao">
+                <h2>Localização</h2>
+            </div>
+
+            <div class="mapa-localizacao">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.74538400756!2d-54.59594822494466!3d-25.51353683620161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f691748cf4a0ef%3A0xa8e90081da035940!2sAuto%20Center%20Silva!5e0!3m2!1spt-BR!2sbr!4v1759358099600!5m2!1spt-BR!2sbr"
+                    width="80%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </section>
+
+        <!-- Seção FAQ -->
+        <section id="faq">
+            <div class="titulo-secao">
+                <h2 class="titulo-secao-vermelho">FAQ</h2>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary>
+                        <span class="faq-numero">1.</span>
+                        Quais formas de pagamento aceitam?
+                        <span class="faq-icone">▼</span>
+                    </summary>
+                    <p>Trabalhamos com cartões de crédito e débito, PIX, transferência bancária e dinheiro. Buscamos
+                        oferecer flexibilidade para facilitar o pagamento.</p>
+                </details>
+
+                <details>
+                    <summary>
+                        <span class="faq-numero">2.</span>
+                        Preciso agendar horário ou posso levar o carro direto?
+                        <span class="faq-icone">▼</span>
+                    </summary>
+                    <p>Atendemos tanto por agendamento quanto por ordem de chegada. No entanto, recomendamos agendar
+                        previamente para evitar espera e garantir atendimento mais rápido.</p>
+                </details>
+
+                <details>
+                    <summary>
+                        <span class="faq-numero">3.</span>
+                        Quanto tempo leva para concertar meu carro?
+                        <span class="faq-icone">▼</span>
+                    </summary>
+                    <p>O prazo varia conforme o tipo de serviço. Manutenções simples podem ser concluídas no mesmo
+                        dia,
+                        enquanto reparos mais complexos exigem um prazo maior, informado após o diagnóstico.</p>
+                </details>
+            </div>
+
+        </section>
+
+        <!-- Seção Atendimento -->
+        <section id="atendimento">
+            <div class="titulo-secao">
+                <h2>Atendimento</h2>
+            </div>
+
+            <div class="formulario-atendimento">
+                <form action="#" method="get">
+                    <div class="nome-usuario">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Insira seu nome" required>
+                    </div>
+
+                    <div class="email-usuario">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Insira seu e-mail" required>
+                    </div>
+
+                    <div class="assunto-usuario">
+                        <label for="assunto">Assunto</label>
+                        <textarea name="assunto" id="assunto" placeholder="Descreva o que deseja" required></textarea>
+                    </div>
+
+                    <div class="botao-enviar">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-coluna">
+                <h3>Horário de atendimento</h3>
+                <p>Segunda à sexta: 7h30 - 18h00</p>
+                <p>Sábado: 7h30 - 12h00</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>Onde estamos</h3>
+                <div class="footer-info">
+                    <img src="assets/img/localizacao-footer.png" alt="Localização">
+                    <p>Av. Beira-Rio - Vila Portes, Foz do Iguaçu</p>
+                </div>
+                <div class="footer-info">
+                    <img src="assets/img/whatsapp-footer.png" alt="WhatsApp">
+                    <p>+55 (45) 99905-1549</p>
+                </div>
+                <div class="footer-info">
+                    <img src="assets/img/email-footer.png" alt="E-mail">
+                    <p>autocentersilvamkt@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>Redes sociais</h3>
+                <div class="footer-info">
+                    <img src="assets/img/instagram-footer.png" alt="Instagram">
+                    <a href="https://instagram.com/autocentersilvaa" target="_blank">autocentersilvaa</a>
+                </div>
+
+                <div class="footer-info">
+                    <img src="assets/img/facebook-footer.png" alt="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61578792843865" target="_blank">Auto Center
+                        Silva</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 Auto Center Silva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript da página -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
