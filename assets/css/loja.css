@@ -775,3 +775,119 @@ footer {
 .mb-2 {
     margin-bottom: 2rem;
 }
+
+/* Botão do WhatsApp */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #128C7E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-whatsapp i {
+    color: #fff;
+    font-size: 32px;
+}
+
+.btn-whatsapp::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #25d366;
+    z-index: -1;
+    animation: pulse-whatsapp 1.5s ease-out infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de voltar ao início da página */
+.btn-scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #000000;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.btn-scroll-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-scroll-top i {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.btn-scroll-top:hover {
+    transform: scale(1.1);
+    background-color: #333333;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsividade dos botões flutuantes */
+@media (max-width: 768px) {
+
+    .btn-whatsapp,
+    .btn-scroll-top {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+    }
+
+    .btn-whatsapp {
+        left: 20px;
+    }
+
+    .btn-scroll-top {
+        right: 20px;
+    }
+
+    .btn-whatsapp i {
+        font-size: 28px;
+    }
+
+    .btn-scroll-top i {
+        font-size: 20px;
+    }
+}
