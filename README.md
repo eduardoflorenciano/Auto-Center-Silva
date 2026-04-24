@@ -85,7 +85,7 @@ Auto-Center-Silva/
 
 ---
 
-## ⚡ Como Executar
+## 🛠️ Como Executar
 
 Por ser um projeto estático (sem back-end), basta abrir o arquivo `index.html` no navegador. Para uma melhor experiência de desenvolvimento, recomenda-se usar uma extensão de servidor local como o **Live Server** (VS Code):
 
