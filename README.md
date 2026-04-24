@@ -55,7 +55,7 @@ Landing page + loja virtual desenvolvidas com HTML, CSS e JavaScript puro (vanil
 
 ---
 
-## 📂 Estrutura de Arquivos
+## 📁 Estrutura de Arquivos
 
 ```
 Auto-Center-Silva/
