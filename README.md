@@ -8,7 +8,7 @@ Site institucional e e-commerce de uma oficina mecânica localizada em Foz do Ig
 
 ---
 
-## Sumário
+## Índice
 
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Funcionalidades](#funcionalidades)
