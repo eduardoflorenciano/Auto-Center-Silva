@@ -2,13 +2,9 @@
 
 Site institucional e e-commerce de uma oficina mecânica localizada em Foz do Iguaçu – PR. O projeto apresenta os serviços da empresa, depoimentos de clientes, loja de pneus com carrinho de compras funcional e formulário de contato.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
 ---
 
-## 📋 Índice
+## 📋 Sumário
 
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Funcionalidades](#funcionalidades)
@@ -19,13 +15,20 @@ Site institucional e e-commerce de uma oficina mecânica localizada em Foz do Ig
 
 ---
 
-## Sobre o Projeto
+## 🧪 Sobre o Projeto
 
 Landing page + loja virtual desenvolvidas com HTML, CSS e JavaScript puro (vanilla), sem dependências de frameworks. O layout é totalmente responsivo, adaptado para dispositivos móveis e desktops, com foco em usabilidade e acessibilidade.
 
 ---
 
-## Funcionalidades
+## 🚀 Tecnologias
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+---
+## 🎯 Funcionalidades
 
 - **Slider automático** com autoplay e pausa ao passar o mouse, navegação manual e responsivo (imagens distintas para desktop/mobile)
 - **Menu hamburger** para mobile com overlay, travamento de scroll e fechamento por tecla ESC
@@ -40,7 +43,7 @@ Landing page + loja virtual desenvolvidas com HTML, CSS e JavaScript puro (vanil
 
 ---
 
-## Páginas
+## 📑 Páginas
 
 | Arquivo | Descrição |
 |---|---|
@@ -52,7 +55,7 @@ Landing page + loja virtual desenvolvidas com HTML, CSS e JavaScript puro (vanil
 
 ---
 
-## Estrutura de Arquivos
+## 📂 Estrutura de Arquivos
 
 ```
 Auto-Center-Silva/
@@ -82,7 +85,7 @@ Auto-Center-Silva/
 
 ---
 
-## Como Executar
+## ⚡ Como Executar
 
 Por ser um projeto estático (sem back-end), basta abrir o arquivo `index.html` no navegador. Para uma melhor experiência de desenvolvimento, recomenda-se usar uma extensão de servidor local como o **Live Server** (VS Code):
 
@@ -97,7 +100,7 @@ Por ser um projeto estático (sem back-end), basta abrir o arquivo `index.html` 
 
 ---
 
-## Tecnologias Utilizadas
+## 🧩 Tecnologias Utilizadas
 
 - **HTML5** – Semântica, acessibilidade com atributos ARIA e SEO básico via meta tags
 - **CSS3** – Flexbox, Grid, variáveis CSS, media queries e animações
