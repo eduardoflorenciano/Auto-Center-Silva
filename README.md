@@ -92,7 +92,7 @@ Por ser um projeto estático (sem back-end), basta abrir o arquivo `index.html` 
 
 2. Abra a pasta no VS Code e inicie o Live Server, ou simplesmente abra o `index.html` diretamente no navegador.
 
-> **Obs.:** O carrinho utiliza `localStorage`, portanto os dados são salvos no navegador do usuário entre sessões.
+> **Atenção:** O carrinho utiliza `localStorage`, portanto os dados são salvos no navegador do usuário entre sessões.
 
 ---
 
